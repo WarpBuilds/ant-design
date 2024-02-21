@@ -9,7 +9,7 @@ permissions:
 jobs:
   tweet:
     if: ${{ github.event.ref_type == 'tag' && !contains(github.event.ref, 'alpha') }}
-    runs-on: ubuntu-latest
+    runs-on: warp-ubuntu-latest-x64-2x
     steps:
       - name: Tweet
         uses: nearform-actions/github-action-notify-twitter@v1

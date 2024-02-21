@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   setup:
-    runs-on: ubuntu-latest
+    runs-on: warp-ubuntu-latest-x64-2x
     steps:
       - name: checkout
         uses: actions/checkout@v4
@@ -50,7 +50,7 @@ jobs:
         run: npm ci
 
   lint:
-    runs-on: ubuntu-latest
+    runs-on: warp-ubuntu-latest-x64-2x
     steps:
       - name: checkout
         uses: actions/checkout@v4
@@ -82,7 +82,7 @@ jobs:
     needs: setup
 
   check_metadata:
-    runs-on: ubuntu-latest
+    runs-on: warp-ubuntu-latest-x64-2x
     steps:
       - name: checkout
         uses: actions/checkout@v4
@@ -107,7 +107,7 @@ jobs:
   ################################ Dist ################################
   dist:
     name: dist
-    runs-on: ubuntu-latest
+    runs-on: warp-ubuntu-latest-x64-2x
     steps:
       - name: checkout
         uses: actions/checkout@v4
@@ -151,7 +151,7 @@ jobs:
         shard: ['1/2', '2/2']
     env:
       REACT: ${{ matrix.react }}
-    runs-on: ubuntu-latest
+    runs-on: warp-ubuntu-latest-x64-2x
     steps:
       - name: checkout
         uses: actions/checkout@v4
@@ -242,7 +242,7 @@ jobs:
   ############################ Test Coverage ###########################
   upload-test-coverage:
     name: test-coverage
-    runs-on: ubuntu-latest
+    runs-on: warp-ubuntu-latest-x64-2x
     needs: [normal-test]
     steps:
       - uses: actions/checkout@v4
@@ -268,7 +268,7 @@ jobs:
 
   ########################### Compile & Test ###########################
   compile:
-    runs-on: ubuntu-latest
+    runs-on: warp-ubuntu-latest-x64-2x
     steps:
       - name: checkout
         uses: actions/checkout@v4
@@ -314,7 +314,7 @@ jobs:
 
   compiled-module-test:
     name: module test
-    runs-on: ubuntu-latest
+    runs-on: warp-ubuntu-latest-x64-2x
     strategy:
       matrix:
         react: ['16', '17', '18']

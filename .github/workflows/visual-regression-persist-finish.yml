@@ -14,7 +14,7 @@ permissions:
 jobs:
   upstream-workflow-summary:
     name: upstream workflow summary
-    runs-on: ubuntu-latest
+    runs-on: warp-ubuntu-latest-x64-2x
     outputs:
       jobs: ${{ steps.persist_start_job_status.outputs.result }}
       build-success: ${{ steps.persist_start_job_status.outputs.build-success }}
@@ -54,7 +54,7 @@ jobs:
     name: persist image-snapshots
     permissions:
       actions: read # for dawidd6/action-download-artifact to query and download artifacts
-    runs-on: ubuntu-latest
+    runs-on: warp-ubuntu-latest-x64-2x
     needs: [upstream-workflow-summary]
     steps:
       - name: checkout

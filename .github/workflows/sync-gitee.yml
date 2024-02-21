@@ -19,7 +19,7 @@ jobs:
   mirror:
     permissions:
       contents: none
-    runs-on: ubuntu-latest
+    runs-on: warp-ubuntu-latest-x64-2x
     if: github.repository == 'ant-design/ant-design'
     steps:
       - name: mirror

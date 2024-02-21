@@ -19,7 +19,7 @@ jobs:
   # Prepare node modules. Reuse cache if available
   setup:
     name: prepare node_modules
-    runs-on: ubuntu-latest
+    runs-on: warp-ubuntu-latest-x64-2x
     steps:
       - name: checkout
         uses: actions/checkout@v4
@@ -53,7 +53,7 @@ jobs:
 
   visual-diff-report:
     name: visual-diff report
-    runs-on: ubuntu-latest
+    runs-on: warp-ubuntu-latest-x64-2x
     needs: setup
     steps:
       - name: checkout

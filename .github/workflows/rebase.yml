@@ -14,7 +14,7 @@ jobs:
       pull-requests: read  # for cirrus-actions/rebase to get info about PR
     name: Rebase
     if: github.event.issue.pull_request != '' && (contains(github.event.comment.body, '/rebase') || contains(github.event.comment.body, '\rebase'))
-    runs-on: ubuntu-latest
+    runs-on: warp-ubuntu-latest-x64-2x
     steps:
     - uses: actions/checkout@v4
       with:
