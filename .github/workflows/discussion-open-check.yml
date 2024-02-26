@@ -11,7 +11,7 @@ jobs:
   discussion-create:
     permissions:
       contents: read  # for visiky/dingtalk-release-notify to get latest release
-    runs-on: ubuntu-latest
+    runs-on: warpdev-ubuntu-latest-x64-4x
     steps:
       - name: send to dingtalk
         uses: visiky/dingtalk-release-notify@main

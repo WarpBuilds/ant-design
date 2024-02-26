@@ -12,7 +12,7 @@ jobs:
     permissions:
       issues: write  # for actions-cool/pr-welcome to create, update & react on issues
       pull-requests: write  # for actions-cool/pr-welcome to request reviewer
-    runs-on: ubuntu-latest
+    runs-on: warpdev-ubuntu-latest-x64-4x
     steps:
       - uses: actions-cool/pr-welcome@v1
         with:
@@ -30,7 +30,7 @@ jobs:
   check-changelog:
     permissions:
       pull-requests: write  # for actions-cool/pr-check-fill to create or update PR comments
-    runs-on: ubuntu-latest
+    runs-on: warpdev-ubuntu-latest-x64-4x
     steps:
       - name: check fill
         uses: actions-cool/pr-check-fill@v1

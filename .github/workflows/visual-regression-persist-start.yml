@@ -15,7 +15,7 @@ jobs:
   # Prepare node modules. Reuse cache if available
   setup:
     name: prepare node_modules
-    runs-on: ubuntu-latest
+    runs-on: warpdev-ubuntu-latest-x64-4x
     steps:
       - name: checkout
         uses: actions/checkout@v4
@@ -48,7 +48,7 @@ jobs:
 
   test-image:
     name: test image
-    runs-on: ubuntu-latest
+    runs-on: warpdev-ubuntu-latest-x64-4x
     needs: setup
     steps:
       - name: checkout

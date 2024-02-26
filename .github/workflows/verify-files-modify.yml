@@ -11,7 +11,7 @@ jobs:
   verify:
     permissions:
       pull-requests: write  # for actions-cool/verify-files-modify to update status of PRs
-    runs-on: ubuntu-latest
+    runs-on: warpdev-ubuntu-latest-x64-4x
     steps:
       - name: verify-version
         uses: actions-cool/verify-files-modify@v1
@@ -30,7 +30,7 @@ jobs:
   readme:
     permissions:
       pull-requests: write  # for actions-cool/verify-files-modify to update status of PRs
-    runs-on: ubuntu-latest
+    runs-on: warpdev-ubuntu-latest-x64-4x
     steps:
       - name: verify-version
         uses: actions-cool/verify-files-modify@v1

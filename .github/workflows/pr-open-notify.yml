@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   send-to-dingtalk:
-    runs-on: ubuntu-latest
+    runs-on: warpdev-ubuntu-latest-x64-4x
     steps:
       - name: send to dingtalk
         uses: visiky/dingtalk-release-notify@main
