@@ -18,7 +18,7 @@ jobs:
   # Prepare node modules. Reuse cache if available
   setup:
     name: prepare preview
-    runs-on: ubuntu-latest
+    runs-on: warp-ubuntu-latest-x64-16x
     steps:
       - name: checkout
         uses: actions/checkout@v4
@@ -51,7 +51,7 @@ jobs:
 
   build-site:
     name: build preview
-    runs-on: ubuntu-latest
+    runs-on: warp-ubuntu-latest-x64-16x
     needs: setup
     steps:
       - name: checkout
@@ -97,7 +97,7 @@ jobs:
 
   site-test:
     name: site E2E test
-    runs-on: ubuntu-latest
+    runs-on: warp-ubuntu-latest-x64-16x
     needs: [setup, build-site]
     steps:
       - name: checkout
